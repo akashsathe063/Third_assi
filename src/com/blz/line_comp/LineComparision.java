@@ -17,10 +17,15 @@ public class LineComparision {
         System.out.println("length of first line: "+Line1);
         Integer Line2 = Integer.valueOf(line2.length_of_line());
         System.out.println("length of second line: "+Line2);
-        if (Line1.equals(Line2)) {
-            System.out.println("length of two line are same");
-        } else {
-            System.out.println("length of two line are not same");
+        Integer compare = Line1.compareTo(Line2);
+        if(compare.equals(-1)){
+            System.out.println(" line1 is less than line2");
+        }
+        else if(compare.equals(1)){
+            System.out.println("line1 is greater than line2");
+        }
+        else{
+            System.out.println("line1 and line2 are equals");
         }
     }
 
